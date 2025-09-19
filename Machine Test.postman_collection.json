@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "c720baac-b9bc-49e0-b09d-83dfe61872cb",
+		"name": "Machine Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48570959"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/api/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"abc\",\r\n  \"email\": \"admin@example.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/api/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/contact-form",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3JlZ2lzdGVyIiwiaWF0IjoxNzU4MjYwMzE5LCJleHAiOjE3NTgyNjM5MTksIm5iZiI6MTc1ODI2MDMxOSwianRpIjoiRG0wb3JXUXZpd3pES1NSMiIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.u7m-NVNblMfJk1fxD8Ad7yA6ZFs0j3DackAW902-ONY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"machine test\",\r\n  \"email\": \"john@example.com\",\r\n  \"subject\": \"Test Message\",\r\n  \"message\": \"Hello, this is a test.\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/contact-form",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"contact-form"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/my-contact-forms",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL3JlZ2lzdGVyIiwiaWF0IjoxNzU4MjYwMzE5LCJleHAiOjE3NTgyNjM5MTksIm5iZiI6MTc1ODI2MDMxOSwianRpIjoiRG0wb3JXUXZpd3pES1NSMiIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.u7m-NVNblMfJk1fxD8Ad7yA6ZFs0j3DackAW902-ONY",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/my-contact-forms",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"my-contact-forms"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
